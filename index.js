@@ -11,10 +11,12 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // Routes
 const authRoutes = require('./routes/auth')
 const productRoutes = require('./routes/products')
+const orderRoutes = require('./routes/orders')
 
 // Use routes
 app.use(authRoutes)
 app.use(productRoutes)
+app.use(orderRoutes)
 
 app.get('/', (req, res) => {
   res.send('Welcome to food-order API')
