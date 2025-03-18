@@ -21,8 +21,16 @@
   "homepage": "https://github.com/barrrliebert/akbar_smkn4_food-order-backend-aplikasi-LKS2025#readme",
   "dependencies": {
     "bcryptjs": "^3.0.2",
+    "body-parser": "^1.20.3",
+    "concurrently": "^3.5.1",
     "express": "^4.21.2",
+    "fs": "0.0.1-security",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.12.1"
+    "mongoose": "^8.12.1",
+    "multer": "^1.4.5-lts.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.2.0",
+    "validatorjs": "^3.22.1"
   }
 }

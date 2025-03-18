@@ -1,6 +1,9 @@
-const OrderController = require('../controller/ordercontroller.js')
+const express = require('express');
+const router = express.Router();
+const authController = require('../controller/authcontroller');
 
-app.post('/api/orders', OrderController.create);
-app.put('api/orders:id', OrderController.Status);
-app.delete('api/:id', OrderController.delete);
-app.get('api/orders', OrderController.getAll);
+router.post('/api/users/register', authController.register);
+router.post('/api/users/login', authController.login);
+router.get('/api/users/profile', authController.getProfile);
+
+module.exports = router;

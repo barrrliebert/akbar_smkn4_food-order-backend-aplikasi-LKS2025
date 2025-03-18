@@ -1,7 +1,9 @@
-const authcontroller = require('./controller/authcontroller');
+const express = require('express');
+const router = express.Router();
+const authController = require('../controller/authcontroller');
 
-app.post('/api/users/register', authcontroller.register);
-app.post('/api/users/login', authcontroller.login);
-app.put('/api/users/profile', authcontroller.update);
+router.post('/api/users/register', authController.register);
+router.post('/api/users/login', authController.login);
+router.get('/api/users/profile', authController.getProfile);
 
-console.log("respon succes")
+module.exports = router;

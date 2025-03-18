@@ -1,10 +1,13 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-main().catch(err => console.log(err));
+mongoose.connect('mongodb://127.0.0.1:27017/lks-food', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log('MongoDB connected successfully'))
+.catch(err => console.log('MongoDB connection error:', err));
 
-async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/test')
-    console.log(main)
-}
-
-console.log('200')
+module.exports = {
+    mongoURI: 'mongodb://127.0.0.1:27017/lks-food',
+    secret: 'sadassaaascasaxxsaxax'
+};

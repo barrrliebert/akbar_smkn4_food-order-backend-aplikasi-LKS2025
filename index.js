@@ -1,15 +1,25 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 const app = express()
 const port = 3001
 const db = require('./config/db.js');
 
+// Middleware
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+
+// Routes
+const authRoutes = require('./routes/auth')
+const productRoutes = require('./routes/products')
+
+// Use routes
+app.use(authRoutes)
+app.use(productRoutes)
 
 app.get('/', (req, res) => {
-  res.send('welcome to api food-order')
+  res.send('Welcome to food-order API')
 })
 
-
-
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Server running on port ${port}`)
 })
