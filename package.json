@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "lks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barrrliebert/akbar_smkn4_food-order-backend-aplikasi-LKS2025.git"
+  },
+  "keywords": [
+    "lks"
+  ],
+  "author": "akbrr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barrrliebert/akbar_smkn4_food-order-backend-aplikasi-LKS2025/issues"
+  },
+  "homepage": "https://github.com/barrrliebert/akbar_smkn4_food-order-backend-aplikasi-LKS2025#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.12.1"
+  }
+}
